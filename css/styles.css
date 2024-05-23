@@ -1,5 +1,6 @@
 body {
     background-color: #252525;
+    overflow: hidden;
 }
 
 .title #username {
@@ -11,12 +12,22 @@ body {
     color: white;
 }
 
-.buttondown #button {
-    position: absolute;
+.navbuttons #buttondown {
+    position: fixed;
     top: 95%;
     left: 50%;
     transform: translate(-50%, -50%);
     size: 50%;
+    cursor: pointer;
+}
+
+.navbuttons #buttonup {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    size: 50%;
+    cursor: pointer;
 }
 
 .profile #picture {
@@ -26,4 +37,14 @@ body {
     transform: translate(-50%, -50%);
     width: 250px;
     height: auto;
+}
+
+#firstframe {
+    position: absolute;
+    top: 0%;
+}
+
+#lastframe {
+    position: absolute;
+    top: 100%;
 }
