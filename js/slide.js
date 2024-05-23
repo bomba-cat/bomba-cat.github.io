@@ -1,4 +1,9 @@
+window.onload = function (){
+    document.getElementById('firstframe').scrollIntoView({ behavior: 'smooth' });
+}
+
 document.getElementById('buttonup').style.display = 'none';
+
 document.getElementById('buttondown').addEventListener('click', function() {
     document.getElementById('lastframe').scrollIntoView({ behavior: 'smooth' });
     document.getElementById('buttondown').style.display = 'none';
