@@ -1,0 +1,25 @@
+body {
+    background-color: #252525;
+}
+
+.title #username {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 550%;
+    margin-left: 160px;
+    margin-top: 180px;
+    color: white;
+}
+
+.buttondown #button {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    size: 50%;
+}
+
+.profile #picture {
+    position: absolute;
+    top: 23%;
+    left: 75%;
+}
