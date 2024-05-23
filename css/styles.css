@@ -3,7 +3,7 @@ body {
 }
 
 .title #username {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Encode Sans Expanded", sans-serif;
     font-size: 5vw;
     position: absolute;
     top: 14%;
