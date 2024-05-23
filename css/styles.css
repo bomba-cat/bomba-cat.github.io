@@ -3,6 +3,17 @@ body {
     overflow: hidden;
 }
 
+.vl {
+    border-left: 6px solid whitesmoke;
+    height: 75%;
+    position: absolute;
+    left: 50%;
+    margin-left: -2px;
+    top: 11%;
+}
+
+/* starter.html */
+
 .title #username {
     font-family: "Encode Sans Expanded", sans-serif;
     font-size: 5vw;
@@ -12,7 +23,90 @@ body {
     color: white;
 }
 
-.navbuttons #buttondown {
+.title #title {
+    font-family: "Encode Sans Expanded", sans-serif;
+    font-size: 5vw;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.title #titleleft {
+    font-family: "Encode Sans Expanded", sans-serif;
+    font-size: 5vw;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    color: white;
+}
+
+.title #titleright {
+    font-family: "Encode Sans Expanded", sans-serif;
+    font-size: 5vw;
+    position: absolute;
+    top: 5%;
+    left: 60%;
+    color: white;
+}
+
+/* sozials.html */
+
+.items #glow {
+    background-color: white; 
+    border-radius: 5%;
+}
+
+.items #one {
+    position: fixed;
+    top: 25%;
+    left: 15%;
+    width: 20%;
+    height: 20%;
+}
+.items #one #glow {
+    box-shadow: 0 0 15px whitesmoke;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.items #one:hover #glow:hover {
+    box-shadow: 0 0 100px whitesmoke;
+}
+
+.items #two {
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 20%;
+}
+.items #two #glow {
+    box-shadow: 0 0 15px orange;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.items #two:hover #glow:hover {
+    box-shadow: 0 0 100px orange;
+}
+
+.items #three {
+    position: fixed;
+    top: 25%;
+    left: 65%;
+    width: 20%;
+    height: 20%;
+}
+.items #three #glow {
+    box-shadow: 0 0 15px cornflowerblue;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.items #three:hover #glow:hover {
+    box-shadow: 0 0 100px cornflowerblue;
+}
+
+/* index.html */
+
+.navbuttons #buttondown1 {
     position: fixed;
     top: 95%;
     left: 50%;
@@ -21,7 +115,25 @@ body {
     cursor: pointer;
 }
 
-.navbuttons #buttonup {
+.navbuttons #buttondown2 {
+    position: fixed;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    size: 50%;
+    cursor: pointer;
+}
+
+.navbuttons #buttonup1 {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    size: 50%;
+    cursor: pointer;
+}
+
+.navbuttons #buttonup2 {
     position: fixed;
     top: 5%;
     left: 50%;
@@ -39,12 +151,19 @@ body {
     height: auto;
 }
 
+/* frames */
+
 #firstframe {
     position: absolute;
     top: 0%;
 }
 
-#lastframe {
+#secondframe {
     position: absolute;
     top: 100%;
+}
+
+#lastframe {
+    position: absolute;
+    top: 200%;
 }
