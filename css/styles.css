@@ -183,6 +183,35 @@ body {
     left: 55%;
 }
 
+.projects #three #img {
+    position: fixed;
+    width: 10%;
+    height: 7%;
+    border-radius: 5%;
+    box-shadow: 0 0 15px coral;
+    transition: box-shadow 0.3s ease-in-out, left 0.3s ease-in-out;
+    left: 58%;
+    top: 55%;
+}
+.projects #three:hover #img:hover {
+    box-shadow: 0 0 100px coral;
+    left: 55%;
+}
+
+.projects #four #img {
+    position: fixed;
+    width: 10%;
+    height: 7%;
+    border-radius: 5%;
+    box-shadow: 0 0 15px coral;
+    transition: box-shadow 0.3s ease-in-out, left 0.3s ease-in-out;
+    left: 58%;
+    top: 65%;
+}
+.projects #four:hover #img:hover {
+    box-shadow: 0 0 100px coral;
+    left: 55%;
+}
 
 /* frames */
 
