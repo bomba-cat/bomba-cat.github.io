@@ -153,6 +153,16 @@ body {
 
 /* projects */
 
+.projects #desc {
+    position: fixed;
+    font-family: "Encode Sans Expanded", sans-serif;
+    font-size: 1vw;
+    color: whitesmoke;
+    width: 15%;
+    left: 75%;
+    top: 35%;
+}
+
 .projects #one #img {
     position: fixed;
     width: 10%;

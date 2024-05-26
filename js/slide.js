@@ -5,6 +5,7 @@ window.onload = function (){
     document.getElementById('buttondown2').style.display = 'none';
     document.getElementById('buttondown1').style.display = 'block';
 }
+
 window.addEventListener('resize', function(){
     document.getElementById('firstframe').scrollIntoView({ behavior: 'smooth' });
     document.getElementById('buttonup1').style.display = 'none';
