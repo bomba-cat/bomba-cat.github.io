@@ -1,2 +1,1 @@
-# bomba-cat.github.io
-portfolio website
+# Silly Portfolio
