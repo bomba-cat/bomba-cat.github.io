@@ -146,8 +146,8 @@ body {
 }
 
 #projects .project {
-    width: 5vw;
-    height: 5vh;
+    width: 20vw;
+    height: 20vh;
     background-color: rgba(15, 15, 15, 0.6);
     position: relative;
     backdrop-filter: blur(0.5vw);
@@ -155,16 +155,38 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1;
     margin: 1vw;
-    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     transition: width 0.3s, height 0.3s;
 }
 
 #projects .project:hover {
-    width: 8vw;
-    height: 8vh;
+    width: 21vw;
+    height: 21vh;
 }
 
 #projects .project .title {
     font-family: "Press Start 2P", system-ui;
+    color: #f04350;
+    text-align: center;
+    font-size: 1vw;
+    transition: font-size 0.3s;
+}
+
+#projects .project:hover .title {
+    font-size: 1.2vw;
+}
+
+#projects .project .description {
+    font-family: "Press Start 2P", system-ui;
     color: white;
+    text-align: center;
+    font-size: 0.4vw;
+    transition: font-size 0.3s;
+}
+
+#projects .project:hover .description {
+    font-size: 0.6vw;
 }
