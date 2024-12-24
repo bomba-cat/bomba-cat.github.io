@@ -11,7 +11,8 @@ html, body {
 }
 
 body {
-    background-image: url("./Forest.jpg");
+    background-image: url("./background.png");
+    /*background-color: gray;*/
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -23,7 +24,7 @@ body {
     height: 5vh;
     background-color: rgba(15, 15, 15, 0.5);
     backdrop-filter: blur(0.5vw);
-    border-radius: 1vh;
+    border-radius: 0.5vh;
     top: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -151,7 +152,7 @@ body {
     background-color: rgba(15, 15, 15, 0.6);
     position: relative;
     backdrop-filter: blur(0.5vw);
-    border-radius: 1%;
+    border-radius: 0.2vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1;
     margin: 1vw;
@@ -160,6 +161,7 @@ body {
     justify-content: center;
     align-items: center;
     transition: width 0.3s, height 0.3s;
+    text-decoration: none;
 }
 
 #projects .project:hover {
@@ -170,6 +172,7 @@ body {
 #projects .project .title {
     font-family: "Press Start 2P", system-ui;
     color: #f04350;
+    text-shadow: 0.25vh 0.1vh 0.25vh #000000;
     text-align: center;
     font-size: 1vw;
     transition: font-size 0.3s;
@@ -183,10 +186,10 @@ body {
     font-family: "Press Start 2P", system-ui;
     color: white;
     text-align: center;
-    font-size: 0.4vw;
+    font-size: 0.6vw;
     transition: font-size 0.3s;
 }
 
 #projects .project:hover .description {
-    font-size: 0.6vw;
+    font-size: 0.8vw;
 }
