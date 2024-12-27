@@ -25,5 +25,5 @@ function showAbout() {
 function showSocials() {
   projects.style.display = 'none';
   about.style.display = 'none';
-  socials.style.display = 'inline';
+  socials.style.display = 'block';
 }
