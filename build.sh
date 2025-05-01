@@ -16,4 +16,4 @@ mkdir -p build/clay                                                       \
 -o build/clay/index.wasm                                                  \
 main.c                                                                    \
 -v																																				\
-&& cp index.html build/clay/index.html && cp -r images/ build/clay/images
+&& cp index.html build/clay/index.html && cp -r images/ build/clay/

@@ -5,6 +5,8 @@ double windowWidth = 1024, windowHeight = 768;
 float modelPageOneZRotation = 0;
 uint32_t ACTIVE_RENDERER_INDEX = 0;
 
+#define RAYLIB_VECTOR2_TO_CLAY_VECTOR2(vector) (Clay_Vector2) { .x = (vector).x, .y = (vector).y }
+
 typedef struct
 {
 	void* memory;
@@ -38,13 +40,14 @@ FrameAllocateString(Clay_String string)
 	return allocated;
 }
 
-
 // TODO: Move to a seperate file
-Clay_RenderCommandArray CreateLayout()
+Clay_RenderCommandArray
+CreateLayout(Clay_String imgURL)
 {
 	Clay_BeginLayout();
 
-	CLAY({
+	CLAY
+		({
 			.id = CLAY_ID("OuterContainer"),
 			.layout =
 			{
@@ -54,8 +57,23 @@ Clay_RenderCommandArray CreateLayout()
 					CLAY_SIZING_GROW(0)
 				}
 			},
-			.backgroundColor = {255, 0, 0, 255}
-			}){}
+			.backgroundColor = {245, 245, 245, 255}
+			})
+	{
+		CLAY
+			({
+				.id = CLAY_ID("SigmaImage"),
+				.layout =
+				{
+					.sizing = { CLAY_SIZING_FIXED(150) }
+				},
+				.image =
+					{
+						.sourceDimensions = { 1080, 2398 },
+						.imageData = FrameAllocateString(imgURL)
+					}
+			 }){}
+	}
 
 	return Clay_EndLayout();
 }
@@ -86,13 +104,15 @@ UpdateDrawFrame
 )
 {
 	frameArena.offset = 0;
-	//windowWidth = width;
-	//windowHeight = height;
+	windowWidth = width;
+	windowHeight = height;
 
 	Clay_SetLayoutDimensions((Clay_Dimensions) { width, height });
+
+	Clay_SetCullingEnabled(ACTIVE_RENDERER_INDEX == 1);
+  Clay_SetExternalScrollHandlingEnabled(ACTIVE_RENDERER_INDEX == 0);
 	
-	
-	return CreateLayout();
+	return CreateLayout(CLAY_STRING("./images/sigma.png"));
 }
 
 int main()
