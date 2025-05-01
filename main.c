@@ -48,7 +48,8 @@ Clay_RenderCommandArray CreateLayout()
 			.id = CLAY_ID("OuterContainer"),
 			.layout =
 			{
-				.sizing = {
+				.sizing =
+				{
 					CLAY_SIZING_GROW(0),
 					CLAY_SIZING_GROW(0)
 				}
