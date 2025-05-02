@@ -42,7 +42,7 @@ FrameAllocateString(Clay_String string)
 
 // TODO: Move to a seperate file
 Clay_RenderCommandArray
-CreateLayout(Clay_String imgURL)
+CreateLayout()
 {
 	Clay_BeginLayout();
 
@@ -70,7 +70,7 @@ CreateLayout(Clay_String imgURL)
 				.image =
 					{
 						.sourceDimensions = { 1080, 2398 },
-						.imageData = FrameAllocateString(imgURL)
+						.imageData = FrameAllocateString(CLAY_STRING("./images/sigma.png"))
 					}
 			 }){}
 	}
@@ -112,7 +112,7 @@ UpdateDrawFrame
 	Clay_SetCullingEnabled(ACTIVE_RENDERER_INDEX == 1);
   Clay_SetExternalScrollHandlingEnabled(ACTIVE_RENDERER_INDEX == 0);
 	
-	return CreateLayout(CLAY_STRING("./images/sigma.png"));
+	return CreateLayout();
 }
 
 int main()
