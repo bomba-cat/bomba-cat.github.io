@@ -1,90 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About bomba.cat</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>bomba.cat — Portfolio</title>
+    <meta name="description" content="Portfolio of bomba.cat — low-level dev, OS & shader tinkerer" />
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="navbar">
-        <div class="wrapper">
-            <p id="projectsbutton" class="label">Projects</p>
-            <p id="aboutbutton" class="label">About</p>
-            <p id="socialsbutton" class="label">Socials</p>
-        </div>
+    <div class="container">
+        <header class="header">
+            <div class="avatar">
+                <img src="https://secure.gravatar.com/avatar/17e8fb76ac33857c658f3a1f1e51dbaccaa0b5bbde020a3ada1fd8e1e12cf3ba?s=384&d=identicon"
+                    alt="profile" />
+            </div>
+            <h1>bomba.cat</h1>
+            <p><a style="text-decoration: underline; color: black;"
+                    href="https://colorcomputerarchive.com/repo/Documents/Books/The%20C%20Programming%20Language%20(Kernighan%20Ritchie).pdf">Make
+                    yourself smart</a></p>
+            <nav class="nav">
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="projects">
+                <a href="https://github.com/bomba-cat/nekowm" style="text-decoration: none;">
+                    <div class="project">
+                        <h4>NekoWM</h4>
+                        <p>NekoWM is a lightweight, stack-like tiling window manager with split-based layouts designed
+                            to be a single, self-contained binary.</p>
+                    </div>
+                </a>
+                <a href="https://github.com/bomba-cat/SillyWankerShader" style="text-decoration: none;">
+                    <div class="project">
+                        <h4>SillyWankerShader</h4>
+                        <p>A minecraft shader with a lot of silly functionalities.</p>
+                    </div>
+                </a>
+                <a href="https://github.com/The-Sigmas/ZFB" style="text-decoration: none;">
+                    <div class="project">
+                        <h4>ZFB</h4>
+                        <p>A lightweight C based Game Engine that uses the Kernels Framebuffer called Zero-Frame Buffer
+                        </p>
+                    </div>
+                </a>
+                <a href="https://github.com/bomba-cat/skibidimbr" style="text-decoration: none;">
+                    <div class="project">
+                        <h4>SkibidiMBR</h4>
+                        <p>A bootloader which it's only goal is to show a 22x22 image of skibidi toilet.
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="socials" class="section">
+            <h2>Socials</h2>
+            <p>GitHub: <a href="https://github.com/bomba-cat" style="color:#000">bomba-cat</a></p>
+            <p>GitLab: <a href="https://gitlab.com/bomba.cat" style="color:#000">bomba.cat</a></p>
+        </section>
+
+        <footer class="footer">You can always contact me on Discord under the username: <u>bomba.cat</u></footer>
     </div>
-    <div id="about">
-        <h2 id="primary" class="title">bomba.cat, 18</h2>
-        <h3 id="secondary" class="title">Software Developer</h3>
-        <img src="https://avatars.githubusercontent.com/u/85764488?v=4" alt="https://avatars.githubusercontent.com/u/85764488?v=4" width="100%" heigh="auto" class="titleimage">
-        <h3 id="comment" class="title">
-        	FreeBSD user,<br/>
-		Certified C enjoyer<br/><br/>
-		I'm available on discord under the username:
-bomba.cat<br/>
-	</h3>
-    </div>
-    <div id="projects">
-        <a id="placeholder" class="project" href="https://github.com/bomba-cat/nekowm">
-          <p class="title">NekoWM</p>
-          <p class="description">My window manager</p>
-        </a>
-        <a id="placeholder" class="project" href="https://github.com/bomba-cat/SillyWankerShader">
-          <p class="title">SillyWankerShader</p>
-          <p class="description">A feature rich Minecraft shader</p>
-        </a>
-        <a id="placeholder" class="project" href="https://github.com/bomba-cat/16RM-OS">
-          <p class="title">16RM-OS</p>
-          <p class="description">A 16bit operating system made fully in assembly</p>
-        </a>
-        <a id="placeholder" class="project" href="https://github.com/bomba-cat/skibidimbr">
-          <p class="title">SkibidiMBR</p>
-          <p class="description">A MBR bootloader which its only goal is to show a 22x22 image of skibidi toilet</p>
-        </a>
-        <a id="placeholder" class="project" href="https://github.com/The-Sigmas/ZFB">
-          <p class="title">ZFB</p>
-	  <p class="description">A portable 2d physics/game engine with a great compatability with other tools</p>
-        </a>
-        <a id="placeholder" class="project" href="https://github.com/bomba-cat/dotfiles">
-          <p class="title">bvim</p>
-          <p class="description">My dotfiles</p>
-        </a>
-    </div>
-  <div id="socials">
-    <div class="socials-container">
-      <a href="https://github.com/bomba-cat" class="social" target="_blank" rel="noopener noreferrer">
-        <div class="name">GitHub</div>
-        <div class="user">bomba-cat</div>
-      </a>
-
-      <a href="https://gitlab.com/bomba.cat" class="social" target="_blank" rel="noopener noreferrer">
-        <div class="name">GitLab</div>
-        <div class="user">bomba.cat</div>
-      </a>
-
-      <a href="https://twitch.tv/bombacatsillyedition" class="social" target="_blank" rel="noopener noreferrer">
-        <div class="name">Twitch</div>
-        <div class="user">bombacatsillyedition</div>
-      </a>
-
-      <a href="https://tiktok.com/@bombacatsillyedition" class="social" target="_blank" rel="noopener noreferrer">
-        <div class="name">TikTok</div>
-        <div class="user">printf("bomba.cat\n");</div>
-      </a>
-
-      <a href="https://youtube.com/@bombacatsillyedition" class="social" target="_blank" rel="noopener noreferrer">
-        <div class="name">Youtube</div>
-        <div class="user">bombacatsillyedition</div>
-      </a>
-
-      <a href="mailto://bledion.morina@hotmail.com" class="social" target="_blank" rel="noopener noreferrer">
-        <div class="name">E-Mail</div>
-        <div class="user">bledion.morina@hotmail.com</div>
-      </a>
-    </div>
-  </div>
-
-  <script src="index.js"></script>
 </body>
+
 </html>
