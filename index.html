@@ -1,72 +1,97 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>bomba.cat's Portfolio</title>
-    <meta name="description" content="You should probably click on this link." />
-    <link rel="stylesheet" href="style.css">
+  <title>my homepage</title>
+
+  <!--
+    css in html i lost my mind
+  -->
+  <style>
+    body {
+      background: #d6d6d6;
+      font-family: "Verdana", "Arial", sans-serif;
+      text-align: center;
+      color: #222;
+    }
+
+    .container {
+      width: 600px;
+      margin: 40px auto;
+      background: #f2f2f2;
+      border: 2px solid #999;
+      padding: 15px;
+    }
+
+    h1 {
+      background: linear-gradient(to right, #bbbbbb, #eeeeee);
+      padding: 10px;
+      border: 1px solid #888;
+      font-size: 20px;
+    }
+
+    img {
+      width: 120px;
+      border: 2px solid #888;
+      margin: 10px 0;
+    }
+
+    .box {
+      border: 1px solid #aaa;
+      background: #ffffff;
+      margin-top: 15px;
+      padding: 10px;
+      text-align: left;
+    }
+
+    a {
+      color: #0033cc;
+    }
+
+    marquee {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      margin-top: 15px;
+      font-size: 12px;
+      color: #666;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="avatar">
-                <img src="https://secure.gravatar.com/avatar/17e8fb76ac33857c658f3a1f1e51dbaccaa0b5bbde020a3ada1fd8e1e12cf3ba?s=384&d=identicon"
-                    alt="profile" />
-            </div>
-            <h1>bomba.cat</h1>
-            <p><a style="text-decoration: underline; color: black;"
-                    href="https://colorcomputerarchive.com/repo/Documents/Books/The%20C%20Programming%20Language%20(Kernighan%20Ritchie).pdf">Make
-                    yourself smart</a></p>
-            <nav class="nav">
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </header>
 
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <div class="projects">
-                <a href="https://github.com/bomba-cat/nekowm" style="text-decoration: none;">
-                    <div class="project">
-                        <h4>NekoWM</h4>
-                        <p>NekoWM is a lightweight, stack-like tiling window manager with split-based layouts designed
-                            to be a single, self-contained binary.</p>
-                    </div>
-                </a>
-                <a href="https://github.com/bomba-cat/SillyWankerShader" style="text-decoration: none;">
-                    <div class="project">
-                        <h4>SillyWankerShader</h4>
-                        <p>A minecraft shader with a lot of silly functionalities.</p>
-                    </div>
-                </a>
-                <a href="https://github.com/The-Sigmas/ZFB" style="text-decoration: none;">
-                    <div class="project">
-                        <h4>ZFB</h4>
-                        <p>A lightweight C based Game Engine that uses the Kernels Framebuffer called Zero-Frame Buffer
-                        </p>
-                    </div>
-                </a>
-                <a href="https://github.com/bomba-cat/skibidimbr" style="text-decoration: none;">
-                    <div class="project">
-                        <h4>SkibidiMBR</h4>
-                        <p>A bootloader which it's only goal is to show a 22x22 image of skibidi toilet.
-                        </p>
-                    </div>
-                </a>
-            </div>
-        </section>
+  <marquee>
+    this is so cool i never knew this existed
+  </marquee>
 
-        <section id="socials" class="section">
-            <h2>Socials</h2>
-            <p>GitHub: <a href="https://github.com/bomba-cat" style="color:#000">bomba-cat</a></p>
-            <p>GitLab: <a href="https://gitlab.com/bomba.cat" style="color:#000">bomba.cat</a></p>
-        </section>
+  <div class="container">
 
-        <footer class="footer">You can always contact me on Discord under the username: <u>bomba.cat</u></footer>
+    <h1>bombacat</h1>
+
+    <img src="https://secure.gravatar.com/avatar/17e8fb76ac33857c658f3a1f1e51dbaccaa0b5bbde020a3ada1fd8e1e12cf3ba?s=384&d=identicon">
+
+    <div class="box">
+      <b>> whoami</b>
+      <p>i write software and enjoy flying flight simulators like <a href="https://www.digitalcombatsimulator.com/en/">dcs world.</a></p>
+      <p>i like understanding how things work under the hood.</p>
     </div>
-</body>
 
+    <div class="box">
+      <b>> links</b>
+      <p>
+        <a href="https://github.com/bomba-cat">github</a><br>
+        <a href="https://gitlab.com/bomba.cat">gitlab</a><br>
+      </p>
+    </div>
+
+    <div class="footer">
+      this was really rushed tbh
+    </div>
+
+  </div>
+
+</body>
 </html>
