@@ -1,106 +1,439 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>my homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!--
-    css in html i lost my mind
-  -->
-  <style>
-    body {
-      background: #d6d6d6;
-      font-family: "Verdana", "Arial", sans-serif;
-      text-align: center;
-      color: #222;
-    }
+    <title>bombacat</title>
 
-    .container {
-      width: 600px;
-      margin: 40px auto;
-      background: #f2f2f2;
-      border: 2px solid #999;
-      padding: 15px;
-    }
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    h1 {
-      background: linear-gradient(to right, #bbbbbb, #eeeeee);
-      padding: 10px;
-      border: 1px solid #888;
-      font-size: 20px;
-    }
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
 
-    img {
-      width: 120px;
-      border: 2px solid #888;
-      margin: 10px 0;
-    }
+        body {
+            background: #e8e8e8;
+            color: #222;
 
-    .box {
-      border: 1px solid #aaa;
-      background: #ffffff;
-      margin-top: 15px;
-      padding: 10px;
-      text-align: left;
-    }
+            font-family: monospace;
+            font-size: 15px;
+        }
 
-    a {
-      color: #0033cc;
-    }
 
-    marquee {
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 10px;
-    }
+        .background {
+            position: fixed;
 
-    .footer {
-      margin-top: 15px;
-      font-size: 12px;
-      color: #666;
-    }
-  </style>
+            inset: 0;
+
+            background-image: url("background.jpg");
+            background-size: cover;
+            background-position: center;
+
+            opacity: 0.16;
+
+            z-index: -1;
+        }
+
+
+        .page {
+            width: 900px;
+            max-width: calc(100% - 30px);
+
+            margin: 35px auto;
+        }
+
+        header {
+            position: relative;
+
+            padding: 22px;
+
+            background: white;
+
+            border: 2px solid #222;
+        }
+
+        header h1 {
+            margin: 0;
+
+            font-size: 44px;
+            letter-spacing: -3px;
+        }
+
+        header h1::before {
+            content: "> ";
+
+            color: #d02020;
+        }
+
+        header .tagline {
+            margin-top: 5px;
+
+            color: #777;
+        }
+
+        .pfp {
+            position: absolute;
+
+            right: 20px;
+            top: 20px;
+
+            width: 96px;
+            height: 96px;
+
+            border: 2px solid #222;
+        }
+
+
+        .layout {
+            display: grid;
+
+            grid-template-columns: 1fr 260px;
+
+            gap: 18px;
+
+            margin-top: 18px;
+        }
+
+
+        .island {
+            margin-bottom: 18px;
+
+            padding: 18px;
+
+            background: white;
+
+            border: 1px solid #555;
+        }
+
+        .title {
+            margin-bottom: 15px;
+
+            font-weight: bold;
+        }
+
+        .title .prompt {
+            color: #d02020;
+        }
+
+
+        .whoami {
+            min-height: 170px;
+        }
+
+        .whoami-image {
+            float: right;
+
+            width: 210px;
+            height: 120px;
+
+            margin-left: 20px;
+            margin-bottom: 10px;
+
+            object-fit: cover;
+
+            border: 1px solid #555;
+        }
+
+        p {
+            line-height: 1.55;
+        }
+
+
+        .project {
+            margin: 12px 0;
+
+            padding-left: 10px;
+
+            border-left: 3px solid #d02020;
+        }
+
+        .project a {
+            color: #b01818;
+        }
+
+        .project small {
+            display: block;
+
+            margin-top: 3px;
+
+            color: #777;
+        }
+
+        .funfact {
+            text-align: left;
+        }
+
+        .funfact img {
+            width: 100%;
+            height: 130px;
+
+            object-fit: cover;
+
+            margin-bottom: 12px;
+
+            border: 1px solid #555;
+        }
+
+
+        .dcs {
+            text-align: left;
+        }
+
+        .dcs img {
+            width: 100%;
+            height: 130px;
+
+            object-fit: cover;
+
+            margin-bottom: 12px;
+
+            border: 1px solid #555;
+        }
+
+        .aircraft {
+            margin: 7px 0;
+
+            padding: 5px 8px;
+
+            border-left: 3px solid #d02020;
+
+            background: #f3f3f3;
+        }
+
+        .aircraft span {
+            color: #777;
+        }
+
+
+        a {
+            color: #b01818;
+        }
+
+        a:hover {
+            color: white;
+            background: #d02020;
+
+            text-decoration: none;
+        }
+
+
+        .status {
+            display: inline-block;
+
+            margin-top: 12px;
+            padding: 3px 7px;
+
+            border: 1px solid #d02020;
+
+            color: #d02020;
+
+            font-size: 11px;
+        }
+
+
+        .separator {
+            height: 2px;
+
+            margin: 5px 0;
+
+            background: #d02020;
+        }
+
+
+        footer {
+            padding-bottom: 40px;
+
+            color: #777;
+
+            font-size: 11px;
+        }
+
+
+        @media (max-width: 700px) {
+
+            .layout {
+                grid-template-columns: 1fr;
+            }
+
+            .pfp {
+                width: 70px;
+                height: 70px;
+            }
+
+            header h1 {
+                font-size: 34px;
+            }
+
+            .whoami-image {
+                float: none;
+
+                width: 100%;
+                height: 160px;
+
+                margin: 0 0 15px 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <div class="background"></div>
+    <div class="page">
+        <header>
+            <img class="pfp"
+                src="https://secure.gravatar.com/avatar/17e8fb76ac33857c658f3a1f1e51dbaccaa0b5bbde020a3ada1fd8e1e12cf3ba?s=384&d=identicon"
+                alt="bombacat">
 
-  <marquee>
-    this is so cool i never knew this existed
-  </marquee>
+            <h1>bombacat</h1>
 
-  <div class="container">
+            <div class="tagline">
+                programming / unix / dcs
+            </div>
 
-    <h1>bombacat</h1>
+            <div class="status">
+                working on dfgl
+            </div>
+        </header>
 
-    <img src="https://secure.gravatar.com/avatar/17e8fb76ac33857c658f3a1f1e51dbaccaa0b5bbde020a3ada1fd8e1e12cf3ba?s=384&d=identicon">
 
-    <div class="box">
-      <b>> whoami</b>
-      <p>i write software and enjoy flying flight simulators like <a href="https://www.digitalcombatsimulator.com/en/">dcs world.</a></p>
-      <p>i like understanding how things work under the hood.</p>
+        <div class="layout">
+            <main>
+
+
+                <section class="island whoami">
+                    <div class="title">
+                        <span class="prompt">&gt;</span> whoami
+                    </div>
+
+                    <img class="whoami-image" src="whoami.jpg" alt="">
+
+                    <p>
+                        i write software and enjoy flying military flight simulators like
+                        <a href="https://www.digitalcombatsimulator.com/en/">
+                            dcs world
+                        </a>.
+                    </p>
+
+                    <p>
+                        i like understanding how things work
+                        under the hood.
+                    </p>
+                </section>
+
+                <section class="island">
+                    <div class="title">
+                        <span class="prompt">&gt;</span> projects
+                    </div>
+
+                    <div class="project">
+                        <a href="https://codeberg.org/bomba-cat/dfgl/">
+                            dfgl
+                        </a>
+
+                        <small>
+                            direct framebuffer graphics library
+                        </small>
+                    </div>
+
+                    <div class="project">
+                        <a href="https://codeberg.org/bomba-cat/Renderline/src/branch/dev">
+                            renderline
+                        </a>
+
+                        <small>
+                            C library for visual novels
+                        </small>
+                    </div>
+
+                    <div class="project">
+                        <a href="https://github.com/bomba-cat/nekowm">
+                            nekowm
+                        </a>
+
+                        <small>
+                            small window manager
+                        </small>
+                    </div>
+                </section>
+
+                <section class="island">
+                    <div class="title">
+                        <span class="prompt">&gt;</span> links
+                    </div>
+                    <p>
+                        <a href="https://codeberg.org/bomba-cat">
+                            codeberg
+                        </a>
+                        <br>
+
+                        <a href="https://github.com/bomba-cat">
+                            github
+                        </a>
+                        <br>
+
+                        <a href="https://gitlab.com/bomba.cat">
+                            gitlab
+                        </a>
+                    </p>
+                </section>
+            </main>
+
+            <aside>
+                <section class="island dcs">
+                    <div class="title">
+                        <span class="prompt">&gt;</span> dcs
+                    </div>
+
+                    <img src="dcs.jpg" alt="">
+
+                    <div class="aircraft">
+                        F-14 Tomcat
+                        <span>pilot</span>
+                    </div>
+
+                    <div class="aircraft">
+                        AH-64 Apache
+                        <span>CPG</span>
+                    </div>
+
+                    <div class="aircraft">
+                        MiG-29 Fulcrum
+                        <span>pilot</span>
+                    </div>
+
+                    <div class="aircraft">
+                        JF-17 Thunder
+                        <span>pilot</span>
+                    </div>
+                </section>
+
+                <section class="island funfact">
+                    <div class="title">
+                        <span class="prompt">&gt;</span> random screenshot
+                    </div>
+                    <img src="abrams.jpg" alt="">
+                </section>
+
+            </aside>
+        </div>
+
+        <div class="separator"></div>
+
+        <footer>
+            brrrrrrrr
+            <br><br>
+            <span>
+                bombacat // 2026
+            </span>
+        </footer>
     </div>
-    
-    <div class="box">
-      <b>> projects</b>
-      <p>
-        <a href="https://codeberg.org/bomba-cat/Renderline/src/branch/dev">renderline</a><br>
-        <a href="https://github.com/bomba-cat/nekowm">nekowm</a><br>
-	    </p>
-    </div>
-
-    <div class="box">
-      <b>> links</b>
-      <p>
-      	<a href="https://codeberg.org/bomba-cat">codeberg</a><br>
-        <a href="https://github.com/bomba-cat">github</a><br>
-        <a href="https://gitlab.com/bomba.cat">gitlab</a><br>
-      </p>
-    </div>
-
-    <div class="footer">
-      this was really rushed tbh
-    </div>
-
-  </div>
-
 </body>
+
 </html>
